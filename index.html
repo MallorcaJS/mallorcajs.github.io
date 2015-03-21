@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css">
+        <link rel="stylesheet" href="common.css">
+
+<style>
+
+#mockups{
+    background:rgba(157, 88, 88, 0.33);
+    margin-top:100px;
+}
+
+#mockups > div > div{
+    text-align: center;
+    min-height: 100px;
+    vertical-align: middle;
+}
+
+#mockups h2{
+    background: #EEE;
+    padding: 20px;
+}
+
+#mockups h2 a{
+    color:rgba(173, 114, 114, 0.39);
+}
+
+.btn-primary {
+    margin-top: 40px;
+}
+
+.btn-primary i{
+    margin-left: 10px;
+}
+
+</style>
+
+
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>CheckAquí</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="#navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="events-list.html">Events</a>
+                        </li>
+                        <li class="active">
+                            <a href="user-info.html">Your Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Welcome to CheckAquí!</h1>
+                        <a href="user-welcome.html" class="btn btn-lg btn-primary">Facebook Sign Up<i class="fa fa-facebook-official fa-fw fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="mockups">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Pages Index</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2><a href="index.html">HOME</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="user-welcome.html">LOGGED</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="user-login-error.html">LOGIN ERROR</a></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2><a href="user-info.html">USER INFO</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="user-edit.html">USER EDIT</a></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2><a href="events-list.html">EVENTS LIST</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="event-new.html">EVENT NEW</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="event-info.html">EVENT INFO</a></h2>
+                </div>
+                <div class="col-md-3">
+                    <h2><a href="event-edit.html">EVENTS EDIT</a></h2>
+                </div>
+            </div>
+        </div>
+
+<script>
+    jQuery(document).ready(function(){
+    
+        var requirements = {
+            "Name": true,
+            "Email": true,
+            "Password": true,
+            "Phone": false,
+        };
+    
+        $.toDos(requirements);
+    
+    });
+</script>
+
+<link rel="stylesheet" href="to-dos.css">
+<script src="jquery.to-do.js"></script>
+<script src="common.js"></script>
+
+    </body>
+
+</html>

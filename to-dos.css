@@ -1,0 +1,47 @@
+.pluginWarning{
+    display: none;
+}
+
+#showReq{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#req{
+    display: none;
+    position: fixed;
+    right:0;
+    top:50px;
+    background:#000;
+    z-index: 9000;
+    padding: 15px;
+    font-family: Courier;
+    color:rgba(255,0,0,1);
+}
+
+#req h1{
+    margin-top: 0;
+    font-family: Courier;
+    background: rgba(36, 101, 147, 0.6);
+    color: #000;
+    padding: 10px;
+}
+
+
+#req div{
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+#req div:before {
+    content: "[ X ]  ";
+}
+
+.true{
+    color:green;
+}
+
+#req div.true:before {
+    content: "[ OK ] ";
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>CheckAquí</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="#navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="events-list.html">Events</a>
+                        </li>
+                        <li class="active">
+                            <a href="user-info.html">Your Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container-fluid">
+                <!--
+                col-xs-12 col-md-3 col-md-pull-9
+                -->
+                <div class="row">
+                    <div class="col-md-7 col-md-push-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="page-header">
+                                        <div class="btn-toolbar " role="toolbar" style="float:right">
+                                            <div class="btn-group ">
+                                                <a href="event-edit.html" class="btn btn-primary">Edit<i class="fa fa-edit fa-fw"></i></a>
+                                                <a class="btn btn-warning">Subscribme<i class="fa fa-fw fa-sign-in "></i></a>
+                                                <a class="btn btn-info">Autocheck<i class="fa fa-fw fa-location-arrow "></i></a>
+                                            </div>
+                                            <div class="btn-group">
+                                                <a class="btn btn-danger">Delete Event<i class="fa fa-fw fa-remove "></i></a>
+                                            </div>
+                                        </div>
+                                        <h1>Event &nbsp;
+                                            <small>Information</small>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="media-list">
+                                        <li class="media">
+                                            <h2>Event Name</h2>
+                                            <div class="creator">Created By
+                                                <a href="user_view.html">username</a>
+                                            </div>
+                                            <div class="date">MARCH 23 2015 // 19:00h - 21:00h</div>
+                                            <p>
+                                                <strong>FREE EVENT</strong>
+                                            </p>
+                                            <a class="pull-left" href="#"><img class="media-object img-responsive" src="http://lorempixel.com/400/400/technics/3/CheckAqui-Event-Name/"></a>
+                                            <p>Event description event description event description event description
+                                                event description event description event description event description
+                                                event description event description event description event description
+                                                event description event description event description...</p>
+                                            <p>Event description event description event description.</p>
+                                            <p>Event description event description event description event description
+                                                event description event description event description event description
+                                                event des.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-pull-7">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="page-header">
+                                            <h1>Address
+                                                <!--&nbsp;<small>Information</small>-->
+                                            </h1>
+                                        </div>
+                                    <address>
+                                        C/ Event address 666, City - Country
+                                    </address>
+                                    <img class="img-responsive" src="http://maps.googleapis.com/maps/api/staticmap?center=Santa Rita 9,Mallorca&zoom=15&scale=false&size=600x600&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:red%7Clabel:1%7CSanta Rita 9,Mallorca" alt="Google Map of {{ Name Event }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1 class="">
+                                        <div class="page-header">
+                                            <h1>
+                                                Atendees
+                                                <!--&nbsp;<small>Information</small>-->
+                                            </h1>
+                                        </div>
+                                    </h1>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <ul id="atendees-list" style="margin-0;padding:0;list-style:none">
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                    <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
+                                        <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
+                                        <a class="User.html">Username</a>
+                                        <p>User description user description user descrip...</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+jQuery(document).ready(function(){
+
+    var requirements = {
+        "Title": true,
+        "Promoter": true,
+        "Picture": true,
+        "Day": true,
+        "Hour": true,
+        "Place (Map, coords)": true,
+        "Description": true,
+        "Price?": true,
+        "Privacy?": false,
+        "Attendees by role (owners, admins, vips...)": true,
+        "Onclick show list of users with photo, name and link to profile?": true,
+        "Will be only 3 types of attendees (regular, vip, evangelist)?": false,
+        "In order to asssign privileges, should the user be already registered in the APP? If not, should we develop an invitation system?": false,
+        "Lifts": false,
+
+    };
+
+    $.toDos(requirements);
+
+    $.ajax({
+        url: 'http://api.randomuser.me/?results=10',
+        dataType: 'json',
+        success: function(data){
+            console.log(data.results);
+            $.each(data.results, function( key, value ) {
+                //console.log("key:" + key)
+                console.log("value:" + value)
+                //console.log()
+                $($("#atendees-list li img")[key]).attr("src",value.user.picture.medium);
+
+                //$("#req").append('<div class="' + value + '">' + key + '</div>');
+            });
+        }
+    });
+
+});
+</script>
+        <link rel="stylesheet" href="to-dos.css">
+        <script src="jquery.to-do.js"></script>
+        <script src="common.js"></script>
+    </body>
+
+</html>
