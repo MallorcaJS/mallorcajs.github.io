@@ -1,4 +1,4 @@
-/*!jQuery ToDos*/
+/*!jQuery To Do*/
 /**
  * To Do List on template
  *
@@ -10,7 +10,7 @@
  */
 
 jQuery.toDos = function(requirements){    
-	$initReq = '<button id="showReq">Show To Do List</button><div id="req"><div class="pluginWarning">jquery-to-dos.js :: WARNING :: Inlcude "to-dos.css" for STYLES</div></div>';
+	$initReq = '<button id="showReq">Show To Do List</button><div id="req"><div class="pluginWarning">jquery-to-dos.js :: WARNING :: Inlcude "jquery.to-do.css" for STYLES</div></div>';
 	$("body").append($initReq);
 
 	$.each( requirements, function( key, value ) {
