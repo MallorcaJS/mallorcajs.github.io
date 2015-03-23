@@ -67,7 +67,7 @@
                                         <li class="media">
                                             <h2>Event Name</h2>
                                             <div class="creator">Created By
-                                                <a href="user_view.html">username</a>
+                                                <a href="user-info.html">username</a>
                                             </div>
                                             <div class="date">MARCH 23 2015 // 19:00h - 21:00h</div>
                                             <p>
@@ -121,56 +121,56 @@
                             </div>
                             
                             <div class="row">
-                                <ul id="atendees-list" style="margin-0;padding:0;list-style:none">
+                                <ul id="atendees-list" style="margin-0;padding:0;list-style:none;display:none;">
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                     <li class="col-xs-4 col-sm-2 col-md-12 col-lg-6">
                                         <a class="pull-left" href="#"><img class="media-object img-responsive img-rounded" src="http://placehold.it/400x400"></a>
-                                        <a class="User.html">Username</a>
-                                        <p>User description user description user descrip...</p>
+                                        <a href="user-info.html" class="username">Username</a>
+                                        <p>User description user des...</p>
                                     </li>
                                 </ul>
                             </div>
@@ -208,13 +208,10 @@ jQuery(document).ready(function(){
         success: function(data){
             console.log(data.results);
             $.each(data.results, function( key, value ) {
-                //console.log("key:" + key)
-                console.log("value:" + value)
-                //console.log()
-                $($("#atendees-list li img")[key]).attr("src",value.user.picture.medium);
-
-                //$("#req").append('<div class="' + value + '">' + key + '</div>');
+                $($("#atendees-list li img")[key]).attr("src",this.user.picture.medium);
+                $($("#atendees-list li .username")[key]).html(this.user.username);
             });
+            $("#atendees-list").show();
         }
     });
 
